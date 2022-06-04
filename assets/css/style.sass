@@ -186,31 +186,66 @@ body
       grid-template-columns: minmax(23%, auto) 1fr
       height: auto
       width: 100%
+      padding-left: 52px
+      padding-right: 52px
+      gap: 32px
 
     &-nav
       flex-direction: column
+      padding: 29px 33px 30px
+      gap: 20px
 
   .tracking
     &-grid
       display: grid
       grid-template-columns: repeat(auto-fill, minmax(245px, 1fr))
       padding-bottom: 0
+      column-gap: 28px
+      row-gap: 30px
 
     &-head
       flex-direction: column
       align-items: start
       gap: 26px
+      padding: 35px 33px 0
 
     &-card
       .body
         flex-direction: column
         align-items: start
+        padding: 0 29px 32px
+
+      .time
+        font-size: 56px
+        line-height: 64px
+
+      .title
+        padding: 27px 31px 12px
+        font-size: 18px
+        line-height: 27px
+
+      .description
+        font-size: 15px
+        font-weight: 500
+        padding-top: 13px
 
     &-nav
       display: grid
       grid-template-rows: 1fr auto
 
-  .profile-info
-    .user-name
-      white-space: pre-line
-      margin-top: 10px
+  .profile
+    &-info
+      padding-bottom: 0
+
+      .user-name
+        white-space: pre-line
+        margin-top: 5px
+        font-size: 40px
+        line-height: 47px
+
+    &-avatar
+      img
+        width: 81px
+
+      .title
+        margin-top: 10px
