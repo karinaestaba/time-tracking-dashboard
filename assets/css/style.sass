@@ -1,0 +1,172 @@
+$blue: hsl(246, 80%, 60%)
+$light_red: hsl(15, 100%, 70%) // work
+$soft_blue: hsl(195, 74%, 62%) // play
+$soft_red: hsl(348, 100%, 68%) // study
+$lime_green: hsl(145, 58%, 55%) // exercise
+$violet: hsl(264, 64%, 52%)  // social
+$soft_orange: hsl(43, 84%, 65%) // self care
+$very_dark_blue: hsl(226, 43%, 10%)
+$dark_blue: hsl(235, 46%, 20%)
+$desaturated_blue: hsl(235, 45%, 61%)
+$pale_blue: hsl(236, 100%, 87%)
+$font_size: 18px //card titles e.g. Work, Play
+$font_family: 'Rubik', sans-serif
+$border_radius: 12px
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+
+  &::after, &::before
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    outline: none
+
+html,
+body
+  height: 100%
+  background-color: $very_dark_blue
+
+body
+  color: white
+  font-family: $font_family
+  font-size: $font_size
+
+.main
+  &-content
+    max-width: 1220px
+    height: 100%
+    padding: 20px
+    margin: 0 auto
+
+    display: flex
+    gap: 20px
+    flex-direction: column
+  
+  &-nav
+    padding: 30px 20px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 10px
+
+.nav-item
+  color: $desaturated_blue
+  text-decoration: none
+
+  &.active
+    color: white
+
+.tracking
+  &-nav
+    background-color: $dark_blue
+    border-radius: $border_radius
+
+  &-head
+    background-color: $blue
+    border-radius: $border_radius
+    padding: 30px 20px
+
+    display: flex
+    gap: 10px
+    align-items: center
+
+  &-grid
+    display: flex
+    gap: 20px
+    flex-direction: column
+    padding-bottom: 20px
+
+  &-card
+    background-color: $dark_blue
+    border-radius: $border_radius
+    
+    &::before
+      content: ''
+      display: block
+      height: 30px
+      background-color: $light_red
+      padding: 25px 20px
+      border-top-left-radius: $border_radius
+      border-top-right-radius: $border_radius
+      background-image: url('../images/icon-work.svg')
+      background-repeat: no-repeat
+      background-position: right
+      background-size: 80px
+      background-origin: content-box
+
+    &:nth-of-type(2)::before
+      background-color: $soft_blue
+      background-image: url('../images/icon-play.svg')
+
+    &:nth-of-type(3)::before
+      background-color: $soft_red
+      background-image: url('../images/icon-study.svg')
+
+    &:nth-of-type(4)::before
+      background-color: $lime_green
+      background-image: url('../images/icon-exercise.svg')
+
+    &:nth-of-type(5)::before
+      background-color: $violet
+      background-image: url('../images/icon-social.svg')
+
+    &:nth-of-type(6)::before
+      background-color: $soft_orange
+      background-image: url('../images/icon-self-care.svg')
+
+    .title
+      background-color: $dark_blue
+      border-top-left-radius: $border_radius
+      border-top-right-radius: $border_radius
+      margin-top: -10px
+      font-size: 16px
+      font-weight: 500
+      padding: 30px 20px 10px
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      &::after
+        content: url('../images/icon-ellipsis.svg')
+        width: 20px
+        margin-bottom: 10px
+
+    .description
+      color: $desaturated_blue
+      font-size: 14px
+
+    .body
+      padding: 0 20px 30px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: center
+
+    span
+      display: block
+
+    .time
+      font-size: 30px
+      font-weight: 300
+
+.profile
+  &-info
+    span
+      display: block
+
+    .title
+      color: $pale_blue
+      font-size: 14px
+
+    .user-name
+      font-size: 25px
+      font-weight: 300
+
+  &-avatar
+    border: 2px solid white
+    border-radius: 50%
+
