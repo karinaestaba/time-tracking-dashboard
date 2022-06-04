@@ -50,7 +50,7 @@ body
     padding: 30px 20px
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: space-evenly
     gap: 10px
 
 .nav-item
@@ -64,6 +64,8 @@ body
   &-nav
     background-color: $dark_blue
     border-radius: $border_radius
+    display: grid
+    grid-template-rows: 1fr auto
 
   &-head
     background-color: $blue
@@ -75,9 +77,9 @@ body
     align-items: center
 
   &-grid
-    display: flex
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
     gap: 20px
-    flex-direction: column
     padding-bottom: 20px
 
   &-card
@@ -171,7 +173,7 @@ body
       border: 2px solid white
       border-radius: 50%
 
-@media (min-width: 998px)
+@media (min-width: 658px)
   body
     height: 100%
     display: grid
@@ -182,10 +184,22 @@ body
 
   .main
     &-content
-      display: grid
-      grid-template-columns: minmax(23%, auto) 1fr
       height: auto
       width: 100%
+
+  .tracking
+    &-grid
+      padding-bottom: 0
+
+    &-nav
+      grid-template-rows: 1fr auto
+
+@media (min-width: 998px)
+  .main
+    &-content
+      display: grid
+      grid-template-columns: minmax(23%, auto) 1fr
+      
       padding-left: 52px
       padding-right: 52px
       gap: 32px
@@ -194,20 +208,22 @@ body
       flex-direction: column
       padding: 29px 33px 30px
       gap: 20px
+      justify-content: start
 
   .tracking
     &-grid
-      display: grid
-      grid-template-columns: repeat(auto-fill, minmax(245px, 1fr))
-      padding-bottom: 0
       column-gap: 28px
       row-gap: 30px
+      grid-template-columns: repeat(auto-fill, minmax(245px, 1fr))
 
     &-head
       flex-direction: column
       align-items: start
       gap: 26px
-      padding: 35px 33px 0
+      justify-content: center
+
+    &-nav
+      grid-template-rows: 1fr 1fr
 
     &-card
       .body
@@ -229,13 +245,10 @@ body
         font-weight: 500
         padding-top: 13px
 
-    &-nav
-      display: grid
-      grid-template-rows: 1fr auto
-
   .profile
     &-info
       padding-bottom: 0
+      padding-top: 10px
 
       .user-name
         white-space: pre-line
@@ -249,3 +262,12 @@ body
 
       .title
         margin-top: 10px
+
+@media (min-width: 1220px)
+  .tracking
+    &-nav
+      grid-template-rows: 1fr auto
+
+    &-head
+      padding: 35px 33px 0
+      justify-content: start
