@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
           changeView(event.target, trackingButtons, trackingData)
         })
       });
+
+      const currentActiveButton = document.getElementById('buttonWeekly')
+
+      if(currentActiveButton != null){
+        currentActiveButton.click()
+      }
     })
 })
 

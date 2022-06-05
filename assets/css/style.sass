@@ -77,6 +77,7 @@ button
     border-radius: $border_radius
     display: grid
     grid-template-rows: 1fr auto
+    animation: slideUp 1s ease 0s 1 normal forwards
 
   &-head
     background-color: $blue
@@ -97,6 +98,7 @@ button
   &-card
     background-color: $dark_blue
     border-radius: $border_radius
+    animation: scaleUpCenter 1s ease 0s 1 normal forwards
     
     &::before
       content: ''
@@ -193,6 +195,25 @@ button
     img
       border: 3px solid white
       border-radius: 50%
+
+@keyframes scaleUpCenter
+  0%
+    transform: scaleX(0.8)
+
+  100%
+    transform: scaleX(1)
+
+@keyframes slideUp
+  0%
+    opacity: 0
+    transform: translateY(40px)
+
+  50%
+    opacity: .5
+
+  100%
+    opacity: 1
+    transform: translateY(0px)
 
 @media (min-width: 658px)
   body
