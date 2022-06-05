@@ -23,67 +23,67 @@
         </div>
       </header>
       <nav class="main-nav">
-        <a href="#!" class="nav-item">Daily</a>
-        <a href="#!" class="nav-item active">Weekly</a>
-        <a href="#!" class="nav-item">Monthly</a>
+        <button data-mode="daily" id="buttonDaily" class="nav-item">Daily</button>
+        <button data-mode="weekly" id="buttonWeekly" class="nav-item active">Weekly</button>
+        <button data-mode="monthly" id="buttonMonthly" class="nav-item">Monthly</button>
       </nav>
     </aside>
     
     <div class="tracking-grid">
-      <article class="tracking-card">
+      <article class="tracking-card" id="resumeWork">
         <h2 class="title">Work</h2>
         <div class="body">
-          <span class="time">32hrs</span>
+          <span class="time"><span class="quantity">32</span>hrs</span>
           <span class="description">
             Last Week - 36hrs
           </span>
         </div>
       </article>
 
-      <article class="tracking-card">
+      <article class="tracking-card" id="resumePlay">
         <h2 class="title">Play</h2>
         <div class="body">
-          <span class="time">10hrs</span>
+          <span class="time"><span class="quantity">10</span>hrs</span>
           <span class="description">
             Last Week - 8hrs
           </span>
         </div>
       </article>
 
-      <article class="tracking-card">
+      <article class="tracking-card" id="resumeStudy">
         <h2 class="title">Study</h2>
         <div class="body">
-          <span class="time">4hrs</span>
+          <span class="time"><span class="quantity">4</span>hrs</span>
           <span class="description">
             Last Week - 7hrs
           </span>
         </div>
       </article>
 
-      <article class="tracking-card">
+      <article class="tracking-card" id="resumeExercise">
         <h2 class="title">Exercise</h2>
         <div class="body">
-          <span class="time">4hrs</span>
+          <span class="time"><span class="quantity">4</span>hrs</span>
           <span class="description">
             Last Week - 5hrs
           </span>
         </div>
       </article>
 
-      <article class="tracking-card">
+      <article class="tracking-card" id="resumenSocial">
         <h2 class="title">Social</h2>
         <div class="body">
-          <span class="time">5hrs</span>
+          <span class="time"><span class="quantity">5</span>hrs</span>
           <span class="description">
             Last Week - 10hrs
           </span>
         </div>
       </article>
 
-      <article class="tracking-card">
+      <article class="tracking-card" id="resumenSelCare">
         <h2 class="title">Self care</h2>
         <div class="body">
-          <span class="time">2hrs</span>
+          <span class="time"><span class="quantity">2</span>hrs</span>
           <span class="description">
             Last Week - 2hrs
           </span>
@@ -91,5 +91,7 @@
       </article>
     </div>
   </main>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

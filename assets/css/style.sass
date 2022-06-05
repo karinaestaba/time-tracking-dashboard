@@ -30,10 +30,16 @@ body
   height: 100%
   background-color: $very_dark_blue
 
-body
+body,
+button
   color: white
   font-family: $font_family
   font-size: $font_size
+
+button
+  background: transparent
+  border: none
+  display: inherit
 
 .main
   &-content
@@ -53,17 +59,17 @@ body
     justify-content: space-evenly
     gap: 10px
 
-    a
-      &:hover
-        color: white
-        transition: color 1s
-
 .nav-item
   color: $desaturated_blue
   text-decoration: none
 
   &.active
     color: white
+
+  &:hover
+    color: white
+    transition: color 1s
+    cursor: pointer
 
 .tracking
   &-nav
@@ -185,7 +191,7 @@ body
 
   &-avatar
     img
-      border: 2px solid white
+      border: 3px solid white
       border-radius: 50%
 
 @media (min-width: 658px)
@@ -249,6 +255,7 @@ body
       .time
         font-size: 56px
         line-height: 64px
+        display: inherit
 
       .title
         padding: 27px 31px 12px
